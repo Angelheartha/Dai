@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Diary</title>
+    <link rel="stylesheet" href="{% static 'css/diary.css' %}">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="{% static 'js/jquery-1.10.1.min.js' %}"></script>
+	<link rel="stylesheet" href="{% static 'js/jquery-1.10.1.min.js' %}">
+</head>
+<header class="header">
+	<a href="#" class="show-modal">No Idea!!</a>
+	<div class="div0">
+		<h1 class="hh0"><a class="link0" href="/">New vocabulary(To go homepage)</a></h1>
+	</div>
+	<div class="div1">
+		<ul class="ul0">
+			<li class="li0 lii1">
+				<h2 class="hghg">what could i write?</h2>
+				<div class="ul3">
+					<p class="li3">
+					Here, you could write new vocabularies you learn today,
+					you could write news vocabularies for your friends
+					</p>
+				</div>
+			</li>
+			<li class="li0 lii2">
+				<h2 class="hghg">How could i write better?</h2>
+				<div class="ul3">
+					 <p class="li3">
+						 if you write this it helps to see.
+						 *pescado=fish, fish=魚
+					 </p>
+				</div>
+			</li>
+			<li class="li0 lii2">
+				<h2 class="hghg">How could i motivate my fried?</h2>
+                <div class="ul3">
+					 <p class="li3">
+						 if you post some link to watch,or to read together,
+						 it can motivate your partner so much!
+					 </p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</header>
+<div id="modalwin" class="modalwin hide">
+	<a href="#" class="modal-close">✖</a>
+	<hi>i don't know...</hi>
+	<div class="modelwin-contents clear">
+		<p>Try to write what you learn,or try to motivate your partner,
+			if you post link of your recomendation, your partner will be happy.
+		</p>
+		<button >ok</button>
+	</div>
+</div>
+
+<body>
+    {% if messages %}
+	    <ul class="messages">
+	    {% for message in messages %}
+	        <li class="message">
+	            {{ message }}
+	        </li>
+	    {% endfor %}
+	    </ul>
+	{% endif %}
+
+    {% block content %}{% endblock %}
+</body>
+
+<footer class="footer">
+        <a class="p4" href="{% url 'admin:logout' %}">Logout</a>
+	<a class="kkk" href="#">Go back</a>
+</footer>
+</html>
