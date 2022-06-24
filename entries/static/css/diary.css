@@ -276,7 +276,7 @@ display:block;
 display:none;
 }
 
-modalwin h1{
+.modalwin h1{
 background:#ededed;
 padding:20px;
 border-radius:5px 5px 0 0;
@@ -297,7 +297,7 @@ font-size:20px;
 text-decoration:none;
 }
 
-.#shade{
+#shade{
 position:fixed;
 left:0;
 top:0;
